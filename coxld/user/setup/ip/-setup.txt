@@ -1,0 +1,1 @@
+[ time display _ 0(display) | 1(undisplay)]

@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Gowun+Dodum&family=Nanum+Gothic:wght@400;700;800&family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+
+/*
+
+font-family: 'Catamaran', sans-serif;
+font-family: 'Gowun Dodum', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Signika Negative', sans-serif;
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Catamaran', 'Nanum Gothic', 'Gowun Dodum', 'Signika Negative', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tool-box {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.t-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.t-inner .container-box {
+  width: calc(100% - 50px);
+  height: 50px;
+  display: flex;
+}
+
+.t-inner .refresh {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.t-inner .refresh span {
+  font-size: 29px;
+  font-weight: 200;
+}
+
+.chat-repl {
+  width: 100%;
+  height: calc(100% - 95px);
+}
+
+.c-inner {
+  width: 100%;
+  height: 100%;
+  padding: 9px 11px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dlqfur {
+  width: 100%;
+  height: 45px;
+  border-top: 1px solid #e1e1e1;
+}
+
+.d-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.comment-box {
+  width: 100%;
+  height: 100%;
+}
+
+.comment-box form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.dn {
+  display: none;
+}
+
+.cb-name {
+  width: 70px;
+  height: 100%;
+}
+
+.cb-comment {
+  width: calc(100% - 44px);
+  height: 100%;
+}
+
+.cb-submit {
+  width: 44px;
+  height: 100%;
+  background-color: #1a1a3e;
+}
+
+.cb-comment input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 0;
+  padding: 0 11px;
+  font-size: 19px;
+}
+
+.cb-submit input {
+  width: 100%;
+  display: none;
+  height: 100%;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 19px;
+}
+
+.sendcomment {
+  width: 100%;
+  height: 100%;
+  display: block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sendcomment span {
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 100;
+}
+
+.chat-repl .c-inner span {
+  font-size: 18px;
+}
+
+.chat {
+  display: block;
+  height: 30px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.chat::-webkit-scrollbar {
+  display: none;
+}
+
+.bdsh {
+  width: 100%;
+  height: 100%;
+  top: 100%;
+}
+
+.textview {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  backdrop-filter: blur(14px);
+  position: fixed;
+  transform: scale(0.1);
+  opacity: 0;
+  top: 100%;
+  transition: opacity 0s, top 0s, transform .15s;
+  z-index: 2;
+}
+
+.textview.d {
+  top: 0;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.tv-top {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+}
+
+.tv-t-blank {
+  width: calc(100% - 50px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 11px;
+}
+
+.sgg-close {
+  width: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.sgg-close span {
+  font-size: 29px;
+  font-weight: 200;
+}
+
+.tv-cont {
+  width: 100%;
+  height: calc(100% - 50px);
+  padding: 9px 11px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.tv-cont span {
+  word-break: break-all;
+  font-size: 19px;
+}
+
+.cb-x-time {
+  font-size: 10px!important;
+  color: #7b0961;
+}
+
+.cb-m-box {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cb-m-box span {
+  font-size: 29px;
+  font-weight: 200;
+}
+
+.setup-root {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 2;
+  right: 100%;
+  transition: .21s;
+  top: 0;
+}
+
+.setup-root.d {
+  right: 0;
+}
+
+.textview .tv-cont > span {
+  display: block;
+}
+
+.textview .tv-cont > span:nth-child(1), .textview .tv-cont > span:nth-child(1) > span {
+  font-size: 13px;
+}
+
+.textview-box-container {
+  position: relative;
+}
+
+.textview-tv-t-blank-innerText {
+  position: relative;
+  top: 17px;
+  opacity: 0;
+  transition: .22s;
+  font-size: 17px;
+  color: #267216;
+}
+
+.textview-tv-t-blank-innerText.d {
+  top: 0;
+  opacity: 1;
+}
+
+.apply-root {
+  position: fixed;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+.apply-root.d {
+  top: 0;
+}
+
+.apply-r-sub, .apply-s-youtube {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: .27s;
+  background-color: #ffffff;
+}
+
+.apply-r-sub.d, .apply-s-youtube.d {
+  left: 0;
+}
+
+/* ####################################### */
+
+.frameWrap {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.frameWrap iframe {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 0;
+}
+
+/* ########################################### */
+.knes {
+  display: none;
+}
