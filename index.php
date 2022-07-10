@@ -10,12 +10,12 @@
     <script defer src=""></script>
   </head>
   <body>
-    <?php echo $_SERVER["HTTP_USER_AGENT"]; ?>
+    <?php echo $_SERVER["HTTP_USER_AGENT"], ' ', $_SERVER["REMOTE_ADDR"]; ?>
     <div class="root">
       <span>광고, 도배시 법적 처벌을 받을수 있습니다.</span>
     </div>
-    <iframe class="rootid" src="/class/main?user=283"></iframe>
-    <button onclick="re()" style="position:fixed;top:0;width:100px;height:90px;">ree</button>
+    <iframe class="rootid" src="/class/main?user=283" style="width:100%;height:100%;"></iframe>
+    <button onclick="re()" style="position:fixed;bottom:0;left:0;width:60px;height:30px;">ree</button>
     <script>function re(){$('.rootid', parent.document).get(0).contentDocument.location.reload();}</script>
   </body>
 </html>

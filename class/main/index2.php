@@ -107,13 +107,18 @@ function r() {
             </div>
           </div>
           <div class="tv-cont">
+            <!-- 안정화 작업중 -->
+            <!--
             <div>
               <span>Time</span>
               <button class="displayTheTime">display</button>
               <button class="undisplayTheTime">undisplay</button>
             </div>
+            -->
+            <!-- // -->
             <div>
-              <span>COXLD collects personal IP for data.</span>
+              <span class="info">AI 학습을 위해 이용자의 IP와 채팅을 수집하며, 이용자는 수집 활동에 대해 거부할 수 없습니다.</span><br>
+              <span class="info">수집한 정보는 coxld 데이터 센터에 저장되며, 한 달 뒤 자동 삭제됩니다.</span>
             </div>
           </div>
         </div>
