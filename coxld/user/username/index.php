@@ -1,7 +1,3 @@
-<?php 
-$wh = $_GET['wh'];
-echo '<input class="dnrg" value="'.$wh.'" style="display:none;">';
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,6 +10,10 @@ echo '<input class="dnrg" value="'.$wh.'" style="display:none;">';
     <script defer src=""></script>
   </head>
   <body>
+<?php 
+$wh = $_GET['wh'];
+echo '<input class="dnrg" value="'.$wh.'" style="display:none;">';
+?>
     <div class="root">
       <div class="p">
         <span>username</span>

@@ -45,10 +45,9 @@ if($_POST) {
   $name = $_POST['name'];
   $comment = $_POST['comment'];
   if (strpos($comment, '<') !== false) {
-    echo '<script>location.href="/coxld/coxldckadu/rule#html";</script>';
   } else {
     $keep = fopen('../../coxld/coxldrlfhr/0/main.php', 'a');
-    fwrite($keep, '<div class="chat"><span class="cb-x-name">< '.$name.' ></span>&nbsp;<span class="cb-x-comment">'.$comment.'</span>&nbsp;<span class="cb-x-time">'.date("Y-m-d H:i:s").'</span></div>');
+    fwrite($keep, '<div class="chat"><span class="cb-x-name">< '.$name.' >&nbsp;</span><span class="cb-x-comment">'.$comment.'&nbsp;</span><span class="cb-x-time">'.date("Y-m-d H:i:s").'</span></div>');
     fclose($keep);
 
     $keep2 = fopen('../../coxld/coxldrlfhr/1/main.php', 'a');
