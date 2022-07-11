@@ -39,6 +39,7 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
         </div>
       </div>
       <div class="chat-repl">
+        <div class="c-x-help"></div>vv./
         <div class="c-inner">
 <?php
 if($_POST) {
